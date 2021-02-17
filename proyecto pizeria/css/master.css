@@ -1,0 +1,272 @@
+li{
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+   
+    border: limegreen;
+    font-size: 20px;
+    font-family: fantasy;
+    font-style: oblique;
+    text-decoration-line: underline;
+    
+    
+
+}
+
+@media only screen and (max-width: 700px){
+    .prueba{
+        height: 30px;
+        width: flex;
+    }
+
+    .encabezado{
+        font-size: 10px;
+    }
+
+    
+
+    .overlay, .overlay2, .overlay3{     
+        
+                                         /*Contenedor de fondo. Oscurecer el Fondo para la ventana emergente*/
+        background-color: dimgrey;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;                 /*Centrar ventana emergente*/
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;                        /*oculta el div y todo su contenido*/
+
+    }
+
+    .popup, .popup2, .popup3{      
+        width: 50px;                                /*Estilo de la ventana emergente*/
+        background-color: snow;
+        box-shadow: 0px, 0px, 5px 0px  rgb(0, 0, 0, .1); 
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        text-align: center;
+        width: 600px;
+        transition: .3s ease all;                  /*transicion*/
+        opacity: 0;                                /*ocultar contenido del div*/
+    }
+
+    .imagen-footer {
+    
+        visibility: hidden;
+        
+        }
+
+        #tabla-tamaño{
+            width: 50px;
+            height: auto;
+        }
+
+        .encab-piza{
+            font-size: 20px;
+            text-align: left;
+        }
+}
+
+
+.prueba{
+    height: 30px;
+    background-color: red;
+}
+
+.imgmain{
+    width: 1000px;
+    height: 600px;
+
+
+}
+
+.section1{
+    background-image: url("../img/pizza-1150031_1280.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 150px;
+}
+
+
+.imagen-footer {
+    
+   width: 500px;
+   height: 300px;
+   text-align: center;
+   margin-left: 400px;
+   padding-bottom: 2px;
+}
+
+    .site-info{
+        text-align: center;
+        text-shadow: rgb(3, 31, 58);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 15px;
+    }
+
+    #img-pizzero{
+        width: 100px;
+        height: 100px;
+    }
+
+    .titulo{
+        font-family: "Grandstander'", cursive;
+        text-align: center;
+        color: rgb(136, 6, 6);
+        opacity: 80%;
+        text-shadow: rgb(3, 31, 58);
+        border-color: rgb(3, 31, 58);
+        text-decoration-line: underline;
+        padding-bottom: 50px;
+        
+    }
+
+    #texto-nav{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+        font-style: oblique;
+    }
+
+
+    .img-contacto{
+      text-align: center;
+      margin-left: 120px;
+    }
+
+
+    .tabla-tamaño{
+        text-align: center;
+        justify-content: center;
+        width: 300px;
+        height: auto;
+        margin-left: 100px;
+    }
+   
+    /*--------------------------Ventana POPUP---------------*/
+
+    .overlay, .overlay2, .overlay3{                                      /*Contenedor de fondo. Oscurecer el Fondo para la ventana emergente*/
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;                             /*Centrar ventana emergente*/
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;                        /*oculta el div y todo su contenido*/
+
+    }
+
+    .overlay.active, .overlay2.active, .overlay3.active{                               /*clase creada para agregar con JS*/
+        visibility: visible;
+    }
+
+
+
+    .popup, .popup2, .popup3{                                       /*Estilo de la ventana emergente*/
+        background-color: snow;
+        box-shadow: 0px, 0px, 5px 0px  rgb(0, 0, 0, .1); 
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        text-align: center;
+        width: 600px;
+        transition: .3s ease all;                  /*transicion*/
+        opacity: 0;                                /*ocultar contenido del div*/
+    }
+
+
+    .popup .btn-cerrar-popup, .popup .btn-cerrar-popup2, .popup .btn-cerrar-popup3 {                            /*estilo del boton de cierre*/
+        font-size: 20px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: blue;
+        transition: .7s ease all;
+        transform:scale(0.5);
+    }
+
+
+    .popup .btn-cerrar-popup:hover, .popup2 .btn-cerrar-popup2:hover,  .popup3 .btn-cerrar-popup3:hover {                   /* estilo mouse */
+        color: black;
+    }
+
+    .popup h1, .popup2 h1, .popup3 h1{                                        /* estilo cabecera*/
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 10ox;
+        opacity: 0;
+    }
+
+
+
+    /*-------------------------------------------------------------------*/
+    /*-----------------------Animaciones css-----------------------------*/
+    /*-------------------------------------------------------------------*/
+
+.popup.active, .popup2.active, .popup3.active{                                                      /*parte de una opacidad de 0 y aumenta su tamaño original cuando se activa el boton*/
+    opacity: 1;
+    transform:scale(1.5);
+}
+
+.popup.popup.active h1, .popup2.popup2.active h1, .popup3.popup3.active h1{
+    animation: entradaTitulo .8s ease .5s forwards;                  /*forwards deja la animacion y el elemento no vuelve a su estado original*/
+}
+
+@keyframes entradaTitulo{                         /*baja por el eje Y y modifica su opacidad*/
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.formulario{
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(3, 31, 58);
+    font-size: 20px;
+    
+}
+
+.boton-form{
+    margin-left: 20px;
+}
+
+.titulo-form{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    color: rgb(3, 31, 58);
+    text-shadow: royalblue;
+    padding-bottom: 20px;
+}
+
+.contactos-web{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.icon1, .icon2, .icon3{
+    padding: 50px;
+    color: red;
+}
+
+
+.pie{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
