@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(aurora-boreal.jpg) #000;
+    background-size:cover;
+    color: #fff;
+    font-size: 16px;
+}
+
+.wrap{
+    width: 90%;
+    max-width: 1000px;
+    /*margin: auto;  si queremos centrar reloj */
+}
+
+.widget{
+    width: 40%;
+    margin: 2em;
+    /*margin: 32px es 2 em */
+}
+
+.widget p{
+    display: inline-block;
+    line-height: 1em;
+}
+
+.fecha{
+    font-family: Oswald, Arial;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    background: rgb(0, 0, 0, .5);
+    padding: 20px;
+    width: 100%;
+}
+
+
+.reloj{
+    font-family: Oswald, Arial;
+    text-align: center;
+    font-size: 4em;
+    background: rgb(0, 0, 0, .5);
+    padding: 20px;
+    width: 100%;
+}
+
+.reloj .caja-segundos{  /*poner al lado el am*/
+    display: inline-block;
+
+}
+
+.reloj .segundos,    /*pomer  el am y los seg ocupando toda su linea*/
+.reloj .ampm{
+    font-size: 2rem;
+    display: block;
+}
